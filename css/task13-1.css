@@ -1,0 +1,128 @@
+header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  background-color: #29BDE0;
+  padding-top: 20px;
+  padding-left: 11px;
+}
+header a {
+  display: block;
+  cursor: hand;
+  position: absolute;
+  top: 20px;
+  left: 11px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 13px;
+  background-position: 0px 0px;
+}
+main {
+  background-color: #F0F0F0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 18px 31px 18px;
+}
+main .f18 {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: HiraginoSansGB-W3;
+  font-weight: normal;
+  color: #9a9a9a;
+  line-height: 58px;
+  background-color: #fff;
+  border: 1px solid #C9C9C9;
+}
+main .box {
+  position: relative;
+  margin-top: 13px;
+  margin-bottom: 31px;
+  padding-bottom: 4px;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #C9C9C9;
+}
+main .box .box-1 {
+  text-align: center;
+  font-size: 19px;
+  font-family: HiraginoSansGB-W3;
+  font-weight: normal;
+  color: #fbb435;
+  line-height: 45px;
+  border-bottom: 1px solid #FBB435;
+  background-color: #fff;
+}
+main .box .f16 {
+  margin: 14px 27px;
+  text-align: center;
+  font-family: HiraginoSansGB-W3;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 68px;
+  background-color: #69D1E9;
+}
+main .box .f12 {
+  font-family: HiraginoSansGB-W3;
+  font-weight: normal;
+  color: #787878;
+  line-height: 1;
+}
+main .box .box-4 {
+  position: relative;
+}
+main .box .box-4 .icon-u14 {
+  position: absolute;
+  right: -22px;
+  top: 22px;
+  width: 14px;
+  height: 28px;
+  background-image: url(../img/u14.png);
+}
+main .box .box-8 {
+  width: 47px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+main .box .box-8 .item1 {
+  width: 9px;
+  height: 9px;
+  border-radius: 4.5px;
+  background-color: #69D1E9;
+}
+main .box .box-8 .item2 {
+  width: 9px;
+  height: 9px;
+  border-radius: 4.5px;
+  background-color: #F0F0F0;
+}
+main .box .box-8 .item3 {
+  width: 9px;
+  height: 9px;
+  border-radius: 4.5px;
+  background-color: #F0F0F0;
+}
+main .box .box-8 .item4 {
+  width: 9px;
+  height: 9px;
+  border-radius: 4.5px;
+  background-color: #F0F0F0;
+}
+.box-6 {
+  position: relative;
+}
+.box-6 a {
+  display: block;
+  cursor: hand;
+  position: absolute;
+  box-sizing: border-box;
+  width: 14px;
+  height: 28px;
+  top: 22px;
+  right: -22px;
+  background-image: url(../img/u14.png);
+}

@@ -1,0 +1,111 @@
+body {
+  font-family: HiraginoSansGB-W3;
+}
+header {
+  position: relative;
+  text-align: center;
+  height: 44px;
+  box-sizing: border-box;
+  background: #29BDE0;
+  color: #fff;
+  font-size: 17px;
+  padding-top: 17px;
+  line-height: 1;
+  border-bottom: 1px solid #fff;
+}
+header .icon-u04 {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  background: url(../img/icon.png);
+  width: 25px;
+  height: 21px;
+  background-position: -210px 0px;
+}
+header .icon-u13 {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  background: url(../img/icon.png);
+  width: 20px;
+  height: 20px;
+  background-position: -276px -30px;
+}
+.db {
+  padding-top: 125px;
+  padding-left: 12.03125vw;
+  padding-right: 12.34375vw;
+  background: url(../img/u08.png) no-repeat;
+  background-position: center top 12px;
+  background-color: #29BDE0;
+}
+.db .f16 {
+  color: #FFC865;
+  font-weight: 700;
+  line-height: 21px;
+}
+.db .f13 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  color: #fff;
+  line-height: 20px;
+}
+.bgwh {
+  box-sizing: border-box;
+  padding-left: 12.03125vw;
+  position: relative;
+  height: 82px;
+  border-bottom: 1px solid #ddd;
+}
+.bgwh .f15 {
+  padding-top: 4px;
+  font-weight: normal;
+  color: #515151;
+}
+.bgwh .f13 {
+  font-weight: normal;
+  color: #a6a6a6;
+  line-height: 20px;
+  padding-top: 10px;
+}
+.bgwh .f10 {
+  position: absolute;
+  top: 8px;
+  font-size: 10px;
+  right: 15.9375vw;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  overflow: auto;
+  background: rgba(41, 189, 224, 0.48);
+}
+footer button {
+  border: 0;
+}
+footer .l {
+  box-sizing: border-box;
+  width: 42.34375vw;
+  line-height: 43px;
+  background-color: #F66F6F;
+  border-radius: 5px;
+  margin-left: 12px;
+}
+footer .r {
+  box-sizing: border-box;
+  width: 42.34375vw;
+  line-height: 43px;
+  background-color: #FBB435;
+  border-radius: 5px;
+  margin-right: 12px;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}

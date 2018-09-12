@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>task13-2</title>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet/less" type="text/css" href="../css/task13-2.less" />
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.10.0/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js">
+			
+			less = {
+				env: "development",
+				async: false,
+				fileAsync: false,
+				poll: 1000,
+				functions: {},
+				dumpLineNumbers: "comments",
+				relativeUrls: false,
+				rootpath: ":/a.com/"
+			};
+		</script>
+		  <script type="text/javascript">
+        $(function(){
+            //播放完毕
+            $('#mp3Btn').on('ended', function() {
+                console.log("音频已播放完成");
+                $('.btn-audio').css({'background':'url(../img/u10.png) no-repeat center bottom','background-size':'cover'});
+            })
+            //播放器控制
+            var audio = document.getElementById('mp3Btn');
+            audio.volume = .3;
+            $('.btn-audio').click(function() {
+                event.stopPropagation();//防止冒泡
+                if(audio.paused){ //如果当前是暂停状态
+                    $('.btn-audio').css({'background':'url(../img/u10.png) no-repeat center bottom','background-size':'cover'});
+                    audio.play(); //播放
+                    return;
+                }else{//当前是播放状态
+                    $('.btn-audio').css({'background':'url(../img/u10.png) no-repeat center bottom','background-size':'cover'});
+                    audio.pause(); //暂停
+                }
+            });
+        })
+    </script>
+	</head>
+
+	<body>
+		<header>
+			<div class="f18">投票
+				<div class="icon-u05"></div>
+				<div class="icon-u06"></div>
+			</div>
+
+			<div class="f13">发言讨论结束，大家请投票
+				<div class="icon-u03"></div>
+				<div class="btn-audio"><audio  id="mp3Btn"><source src="../audio/财富自由.mp3" type="audio/mpeg" /></audio></div>
+			</div>
+		</header>
+		<main>
+			<div class="f12">点击得票数最多人的头像</div>
+			<div class="box">
+				<div class="item01 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+				<div class="item02 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+				<div class="item03 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item04 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+				<div class="item05 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+				<div class="item06 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item07 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+				<div class="item08 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+				<div class="item09 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+			</div>
+			<div class="box">
+
+				<div class="item10 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+				<div class="item11 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+				<div class="item12 item">
+					<div class="box-1">水民</div>
+					<div class="box-2">1号</div>
+					<div class="icon-u21"></div>
+					<div class="icon-u22"></div>
+					<div class="icon-u23"></div>
+					<div class="icon-u24"></div>
+				</div>
+
+			</div>
+
+		</main>
+		<footer>
+			<div class="ml20">
+				<div class="f20"><a href="../html/task13-3.html">投死</a></div>
+			</div>
+
+		</footer>
+
+	</body>
+
+</html>

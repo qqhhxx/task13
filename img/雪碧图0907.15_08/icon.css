@@ -1,0 +1,66 @@
+/* made by  雪碧图制作专家v1.0 */
+.icon
+{
+ display:block;
+ background:url(icon.png)  no-repeat;
+}
+.icon-u01{
+ width:17px;
+ height:13px;
+ background-position:0px 0px;
+}
+.icon-u02{
+ width:12px;
+ height:20px;
+ background-position:-70px 0px;
+}
+.icon-u03{
+ width:7px;
+ height:6px;
+ background-position:-140px 0px;
+}
+.icon-u04{
+ width:25px;
+ height:21px;
+ background-position:-210px 0px;
+}
+.icon-u05{
+ width:19px;
+ height:20px;
+ background-position:-280px 0px;
+}
+.icon-u06{
+ width:18px;
+ height:18px;
+ background-position:-350px 0px;
+}
+.icon-u07{
+ width:15px;
+ height:15px;
+ background-position:-420px 0px;
+}
+.icon-u09{
+ width:15px;
+ height:15px;
+ background-position:4px -30px;
+}
+.icon-u10{
+ width:26px;
+ height:26px;
+ background-position:-66px -30px;
+}
+.icon-u11{
+ width:15px;
+ height:15px;
+ background-position:-136px -30px;
+}
+.icon-u12{
+ width:7px;
+ height:6px;
+ background-position:-206px -30px;
+}
+.icon-u13{
+ width:20px;
+ height:20px;
+ background-position:-276px -30px;
+}

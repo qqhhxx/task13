@@ -1,0 +1,123 @@
+@bg-blue: #29BDE0;
+@bg-yellow: #FBB435;
+@bg-red: #F66F6F;
+@yellow: #FFC865;
+@gray2: #A6A6A6;
+@gray1: #C7C7C7;
+@black: #515151;
+body {
+    font-family: HiraginoSansGB-W3;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    height: 44px;
+    box-sizing: border-box;
+    background: @bg-blue;
+    color: #fff;
+    font-size: 17px;
+    padding-top: 17px;
+    line-height: 1;
+    border-bottom: 1px solid #fff;
+    .icon-u04 {
+        position: absolute;
+        top: 14px;
+        left: 10px;
+        background: url(../img/icon.png);
+        width: 25px;
+        height: 21px;
+        background-position: -210px 0px;
+    }
+    .icon-u13 {
+        position: absolute;
+        top: 14px;
+        right: 10px;
+        background: url(../img/icon.png);
+        width: 20px;
+        height: 20px;
+        background-position: -276px -30px;
+    }
+}
+
+.db {
+    padding-top: 125px;
+    padding-left: 77/6.4vw;
+    padding-right: 79/6.4vw;
+    background: url(../img/u08.png) no-repeat;
+    background-position: center top 12px;
+    background-color: @bg-blue;
+    .f16 {
+        color: @yellow;
+        font-weight: 700;
+        line-height: 21px;
+    }
+    .f13 {
+        padding-top: 20px;
+        padding-bottom: 5px;
+        color: #fff;
+        line-height: 20px;
+    }
+}
+
+.bgwh {
+    box-sizing: border-box;
+    padding-left: 77/6.4vw;
+    position: relative;
+    height: 82px;
+    border-bottom: 1px solid #ddd;
+    .f15 {
+        padding-top: 4px;
+        font-weight: normal;
+        color: rgba(81, 81, 81, 1);
+    }
+    .f13 {
+        font-weight: normal;
+        color: rgba(166, 166, 166, 1);
+        line-height: 20px;
+        padding-top: 10px;
+    }
+    .f10 {
+        position: absolute;
+        top: 8px;
+        font-size: 10px;
+        right: 102/6.4vw;
+    }
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    overflow: auto;
+    background: rgba(41, 189, 224, 0.48);
+    button {
+        border: 0;
+    }
+    ;
+    .l {
+        box-sizing: border-box;
+        width: 271/6.4vw;
+        line-height: 43px;
+        background-color: @bg-red;
+        border-radius: 5px;
+        margin-left: 12px;
+    }
+    .r {
+        box-sizing: border-box;
+        width: 271/6.4vw;
+        line-height: 43px;
+        background-color: @bg-yellow;
+        border-radius: 5px;
+        margin-right: 12px;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+}

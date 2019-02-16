@@ -1,0 +1,225 @@
+.slider {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    z-index: 100;
+}
+
+
+/* slidershell exists only
+to provide a positioning context for the range input and other elements.*/
+
+.slidershell {
+    border: 0 none;
+    position: relative;
+    left: 0px;
+    top:0;
+    overflow:visible;
+}
+
+
+/* .slidertrack is the visible track on which the user drags the thumb button. */
+
+.slidertrack {
+    width:300px;
+    
+    height: 2px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index:100;
+    
+    background: #ffe6be;
+   
+}
+
+
+/* .sliderfill adds color (or a gradient as seen here) to the track as the user 
+    drags the thumb. */
+
+.sliderfill {
+    height: 2px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    
+    background: #fcc671;
+    z-index:200;
+}
+
+
+/* .sliderthumb can be any css you like including an image. 
+    The dimensions must match those found in the rule for 
+    input[type=range]::-webkit-slider-thumb. */
+
+.sliderthumb {
+    width: 30px;
+    height: 18px;
+    background-image: url(../img/handle.png);
+    background-size: 30px 18px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 0 none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    pointer-events: none;
+    z-index:300;
+}
+
+
+/* .slidervalue can be styled as you see fit */
+
+.slidervalue {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #000;
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    border: 0 none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    pointer-events: none;
+    border:1px solid red;
+}
+
+
+/* First we have to make transparent all the default elements of the range input.
+    We use color:transparent to eliminate the default tick marks in IE. */
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 100%;
+    -webkit-appearance: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0 none;
+    background: transparent;
+    color: transparent;
+    overflow: visible;
+}
+
+input[type=range]::-moz-range-track {
+    width:300px;
+    height: 100%;
+    -moz-appearance: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0 none;
+    background: transparent;
+    color: transparent;
+    overflow: visible;
+}
+
+input[type=range] {
+    width: 300px;
+    height: 100%;
+    -webkit-appearance: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0 none;
+    background: red;
+    color: transparent;
+    overflow: visible;
+}
+
+
+/* we need a separate rule for when the range input is to be vertical */
+
+input[type=range].slidervertical {
+    -webkit-appearance: slider-vertical;
+    writing-mode: bt-lr;
+    /* IE */
+    opacity: 0.01;
+    /* needed to hide the default slider-vertical appearance */
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border: transparent;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+
+/* Make the thumbs the same size as your custom sliderthumb. 
+    they will not be visible but they will be draggable.    */
+
+input[type=range]::-ms-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 0px;
+    border: 0 none;
+    background: transparent;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 0px;
+    border: 0 none;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 0px;
+    border: 0 none;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+
+/* microsoft IE10+ and Edge - eliminates default fills before and after thumb */
+
+input[type=range]::-ms-fill-lower {
+    background: transparent;
+    border: 0 none;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: transparent;
+    border: 0 none;
+}
+
+input[type=range]::-ms-tooltip {
+    display: none;
+}
+
+
+.add-number{
+    position:absolute;
+    top:100px;
+    left:20px;
+    background:url(../img/addicon.png) no-repeat;
+    background-size:9px 9px;
+    background-position: center center;
+    border:1px solid #D9D9D9;
+    width:13px;
+    height:13px;
+}
+.subtract-number{
+    position:absolute;
+    top:100px;
+    left:50px;
+    background:url(../img/subtract.png) no-repeat;
+    background-size:9px 2px;
+    background-position: center center;
+    border:1px solid #D9D9D9;
+    width:13px;
+    height:13px;
+}
+

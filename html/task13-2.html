@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="../css/common.css">
 		<link rel="stylesheet/less" type="text/css" href="../css/task13-2.less" />
-		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.10.0/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js">
 			
 			less = {
@@ -50,7 +50,7 @@
 
 	<body>
 		<header>
-			<div class="f18">投票
+			<div class="f18">法官日记
 				<div class="icon-u05"></div>
 				<div class="icon-u06"></div>
 			</div>
@@ -63,119 +63,202 @@
 		<main>
 			<div class="f12">点击得票数最多人的头像</div>
 			<div class="box">
-				<div class="item01 item">
-					<div class="box-1">水民</div>
-					<div class="box-2">1号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
+				<div class="container">
+					<div class="item01 item">
+						<div class="box-1" id="box1"></div>
+						<div class="box-2">1号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item02 item">
+						<div class="box-1" id="box2"></div>
+						<div class="box-2">2号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item03 item">
+						<div class="box-1" id="box3"></div>
+						<div class="box-2">3号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					
+					<div class="item04 item">
+						<div class="box-1" id="box4"></div>
+						<div class="box-2">4号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item05 item">
+						<div class="box-1" id="box5"></div>
+						<div class="box-2">5号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item06 item">
+						<div class="box-1" id="box6"></div>
+						<div class="box-2">6号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item01 item">
+						<div class="box-1" id="box7"></div>
+						<div class="box-2">7号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item02 item">
+						<div class="box-1" id="box8"></div>
+						<div class="box-2">8号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item03 item">
+						<div class="box-1" id="box9"></div>
+						<div class="box-2">9号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					
+					<div class="item04 item">
+						<div class="box-1" id="box10"></div>
+						<div class="box-2">10号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item05 item">
+						<div class="box-1" id="box11"></div>
+						<div class="box-2">11号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item06 item">
+						<div class="box-1" id="box12"></div>
+						<div class="box-2">12号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item01 item">
+						<div class="box-1" id="box13"></div>
+						<div class="box-2">13号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item02 item">
+						<div class="box-1"id="box14"></div>
+						<div class="box-2">14号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item03 item">
+						<div class="box-1" id="box15"></div>
+						<div class="box-2">15号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					
+					<div class="item04 item">
+						<div class="box-1" id="box16"></div>
+						<div class="box-2">16号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item05 item">
+						<div class="box-1" id="box17"></div>
+						<div class="box-2">17号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
+					<div class="item06 item">
+						<div class="box-1" id="box18"></div>
+						<div class="box-2">18号</div>
+						<div class="icon-u21"></div>
+						<div class="icon-u22"></div>
+						<div class="icon-u23"></div>
+						<div class="icon-u24"></div>
+					</div>
 				</div>
-				<div class="item02 item">
-					<div class="box-1">水民</div>
-					<div class="box-2">2号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-				<div class="item03 item">
-					<div class="box-1">警察</div>
-					<div class="box-2">3号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
+				
 			</div>
-			<div class="box">
-				<div class="item04 item">
-					<div class="box-1">法官</div>
-					<div class="box-2">4号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-				<div class="item05 item">
-					<div class="box-1">狙击手</div>
-					<div class="box-2">5号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-				<div class="item06 item">
-					<div class="box-1">医生</div>
-					<div class="box-2">6号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-			</div>
-			<div class="box">
-				<div class="item07 item">
-					<div class="box-1">杀手</div>
-					<div class="box-2">7号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-				<div class="item08 item">
-					<div class="box-1">水民</div>
-					<div class="box-2">8号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-				<div class="item09 item">
-					<div class="box-1">水民</div>
-					<div class="box-2">9号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-			</div>
-			<div class="box">
-
-				<div class="item10 item">
-					<div class="box-1">水民</div>
-					<div class="box-2">1号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-				<div class="item11 item">
-					<div class="box-1">水民</div>
-					<div class="box-2">1号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-				<div class="item12 item">
-					<div class="box-1">水民</div>
-					<div class="box-2">1号</div>
-					<div class="icon-u21"></div>
-					<div class="icon-u22"></div>
-					<div class="icon-u23"></div>
-					<div class="icon-u24"></div>
-				</div>
-
-			</div>
+			
+			
 
 		</main>
 		<footer>
 			<div class="ml20">
-				<div class="f20"><a href="../html/task13-3.html">投死</a></div>
+				<div class="f20"><a href="../html/task13-3.html">开始游戏</a></div>
 			</div>
 
 		</footer>
+		
+		<script type="text/javascript">
+			var t=sessionStorage.getItem('total');
+			
+			console.log(t);
+		
+			$(".item").slice(t).css("visibility","hidden");
+			var ar=JSON.parse(sessionStorage.getItem('key'));
+			console.log(ar);
+			$("#box1").html(ar[0]);
+			$("#box2").html(ar[1]);
+			$("#box3").html(ar[2]);
+			$("#box4").html(ar[3]);
+			$("#box5").html(ar[4]);
+			$("#box6").html(ar[5]);
+			$("#box7").html(ar[6]);
+			$("#box8").html(ar[7]);
+			$("#box9").html(ar[8]);
+			$("#box10").html(ar[9]);
+			$("#box11").html(ar[10]);
+			$("#box12").html(ar[11]);
+			$("#box13").html(ar[12]);
+			$("#box14").html(ar[13]);
+			$("#box15").html(ar[14]);
+			$("#box16").html(ar[15]);
+			$("#box17").html(ar[16]);
+			$("#box18").html(ar[17]);
+			
+			$("header .f13").hide();	
+			$("main .f12").hide();	
+	
+			
+			
+			
+		</script>
 
 	</body>
 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>sz</title>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet/less" type="text/css" href="../css/slider111.less" />
+
+		<script type="text/javascript" src="../js/jquery.js">
+		</script>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js">
+			less = {
+				env: "development",
+				async: false,
+				fileAsync: false,
+				poll: 1000,
+				functions: {},
+				dumpLineNumbers: "comments",
+				relativeUrls: false,
+				rootpath: ":/a.com/"
+			};
+		</script>
+	</head>
+
+	<body>
+
+		<div class="slidershell" id="slidershell1">
+			<div class="sliderfill" id="sliderfill1"></div>
+			<div class="slidertrack" id="slidertrack1"></div>
+			<div class="sliderthumb" id="sliderthumb1"></div>
+			<div class="slidervalue" id="slidervalue1">4</div>
+			<input class="slider" id="slider1" type="range" min="4" max="18" oninput="showValue();" onchange="setValue();" />
+		</div>
+
+		<button class="add-number"></button>
+		<button class="subtract-number"></button>
+
+		<script type="text/javascript">
+			function showValue() {
+				var ttt = ($(".slider").val() - 4) / 14 * 270;
+				var lll = ($(".slider").val() - 4) / 14 * 300;
+				var k01 = $(".slider").val();
+
+				$(".sliderfill").css("width", ttt + 'px');
+				$(".sliderthumb").css("left", ttt + "px");
+
+				$(".slidervalue").html(k01);
+				console.log(k01);
+
+			}
+
+			$(".add-number").click(function() {
+				var t = $(".slider").val();
+				t = Number(t) + 1;
+				$(".slider").val(t);
+				console.log(t);
+				
+
+				$(".slidervalue").text(t);
+				showValue();
+
+			});
+			$(".subtract-number").click(function() {
+				var t = $(".slider").val();
+				t = Number(t) -1;
+				$(".slider").val(t);
+				console.log(t);
+				
+
+				$(".slidervalue").text(t);
+				showValue();
+
+			});
+
+
+			function setValue() {
+
+				showValue();
+			}
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>pass2</title>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../css/pass2.css" />
+
+		<script type="text/javascript" src="../js/jquery.js"></script>
+
+		
+
+	</head>
+	<body>
+		<main>
+			<div id="page2"></div>
+			<div class="mt42">
+				<p>角色：<span id="role"></span></p>
+				<p>词组:<span id="word"></span></p>
+			</div>
+			<button><a href="pass.html">隐藏并传递给四号</a></button>
+
+		</main>
+
+	</body>
+	<script type="text/javascript">
+		var role= JSON.parse(sessionStorage.getItem('key'));
+		var waterman= JSON.parse(sessionStorage.getItem('waterman'));
+		var ghost= JSON.parse(sessionStorage.getItem('ghost'));
+		$("#role").html(role[2]);
+		if(role[2]=="水民"){
+			$("#word").html(waterman);
+			
+		}
+		else {
+			$("#word").html(ghost);
+		}
+		
+		 var rr= sessionStorage.getItem("show");
+		$("#page2").html(rr);
+			sessionStorage.setItem("show", rr+1);
+		
+		
+	</script>
+</html>

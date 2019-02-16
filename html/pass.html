@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>pass</title>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet/less" type="text/css" href="../css/pass.less" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/way.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js">
+			
+			less = {
+				env: "development",
+				async: false,
+				fileAsync: false,
+				poll: 1000,
+				functions: {},
+				dumpLineNumbers: "comments",
+				relativeUrls: false,
+				rootpath: ":/a.com/"
+			};
+		</script>
+
+
+
+	</head>
+	<body>
+		<header>
+			<div class="f18">法官日记
+				<div class="icon-u05"></div>
+				<div class="icon-u06"></div>
+			</div>
+			
+		</header>
+			
+	
+		
+		<main>
+			
+			<div class="mt42">
+				<div id="number">1</div>
+				<div class="check-icon"></div>
+				<div class="wow-icon"></div>
+				<div class="date">
+						<div class="mt19">角色：<span id="playerRole"></span></div>
+					    <div id="wordA">词组：<span way-data="myFormData.waterMan"></span></div>
+						<div id="wordB">词组：<span way-data="myFormData.ghost"></span></div>
+				        <div class="f13">想办法猜到别人的词，同时还要注意不要暴露自己哦！</div>   
+					 
+				</div>
+			</div>
+			<footer>
+				<button id="number2">查看1号身份
+				
+				</button>
+				
+			</footer>
+		
+				
+				
+			
+			
+
+		</main>
+
+	</body>
+
+	<script>
+		//函数设置头部数字
+		var x = 0;
+
+
+		var t = sessionStorage.getItem('total');
+		var numberArray = ["1","1","2", "2", "3", "3", "4", "4", "5", "5", "6", "6", "7", "7", "8", "8", "9", "9", "10",
+			"10", "11", "11", "12", "12","13", "13", "14", "14", "15", "15", "16", "16", "17", "17", "18", "18"];
+		
+
+
+		var array2 = ["查看1号身份", "隐藏并传递给2号", "查看2号身份", "隐藏并传递给3号", "查看3号身份", "隐藏并传递给4号", "查看4号身份", "隐藏并传递给5号", "查看5号身份",
+			"隐藏并传递给6号",
+			"查看6号身份", "隐藏并传递给7号", "查看7号身份", "隐藏并传递给8号", "查看8号身份", "隐藏并传递给9号", "查看9号身份", "隐藏并传递给10号",
+			"查看10号身份", "隐藏并传递给11号", "查看11号身份", "隐藏并传递给12号", "查看12号身份", "隐藏并传递给13号", "查看13号身份", "隐藏并传递给14号",
+			"查看14号身份", "隐藏并传递给15号", "查看15号身份", "隐藏并传递给16号", "查看16号身份", "隐藏并传递给17号", "查看17号身份", "隐藏并传递给18号","查看18号身份", "法官查看"];
+		
+
+		$("#number2").click(function() {
+			x++;
+			//切换底部和头部文字
+			switch (true) {
+
+				case x < (t * 2-1):
+					$("#number").html(numberArray[x]);
+					$("#number2").html(array2[x]);
+					break;
+				case x == (t * 2-1):
+					$("#number2").html("法官查看");
+					break;
+
+                case x == (t * 2):    
+				
+
+					window.location.href = "task13-2.html";
+
+			}
+			//切换画面
+			if(x%2==0){
+				$(".check-icon").css("display","block");
+				$(".wow-icon").css("visibility","hidden");
+				$(".date").css("visibility","hidden");
+				
+			}
+			else{
+				$(".check-icon").css("display","none");
+				$(".wow-icon").css("visibility","visible");
+				$(".date").css("visibility","visible");
+				
+			}
+			
+			//切换中间文字
+			
+			
+			var ar=JSON.parse(sessionStorage.getItem('key'));
+			
+			
+			
+			$("#playerRole").html(ar[Math.floor(x/2)]);
+			
+		    if(ar[Math.floor(x/2)]=="水民"){
+				$("#wordA").show();
+				$("#wordB").hide();
+				
+				
+				
+			}else if(ar[Math.floor(x/2)]=="幽灵"){
+				$("#wordA").hide();
+				$("#wordB").show();
+				
+					
+			}
+				
+				
+		});
+		
+		
+	</script>
+
+</html>

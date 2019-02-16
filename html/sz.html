@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>sz</title>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet/less" type="text/css" href="../css/sz.less" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/way.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js">
+			
+			less = {
+				env: "development",
+				async: false,
+				fileAsync: false,
+				poll: 1000,
+				functions: {},
+				dumpLineNumbers: "comments",
+				relativeUrls: false,
+				rootpath: ":/a.com/"
+			};
+		</script>
+		
+	</head>
+
+	<body>
+		<header>参数设置
+			<a href="#">
+				<div class="icon-u04"></div>
+			</a>
+			<a href="#">
+				<div class="icon-u13"></div>
+			</a>
+		</header>
+		<main>
+			<div class="section1">
+				<div class="f18" id="wanjia">玩家配比</div>
+				<div class="mt5">
+					<div class="f13 l" id="left">
+						<div>幽灵<span id="ghost">1</span>人</div>
+					</div>
+					<div class="f13" id="right">
+						<div>水民<span id="waterman">3</span>人</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="section2">
+                <form way-data="myFormData" way-persistent="true">
+				<div class="bb1"><input type="text" id="waterman-word" name="waterMan" placeholder="水民词组"></div>
+				<div class="bb1"><input type="text" id="ghost-word" name="ghost" placeholder="幽灵词组"></div>
+				</form>
+			</div>
+			<div class="section3">
+				<div class="dialog">
+					<div class="dialog-text pt20 pb20 pl20">请输入正确的玩家数量</div>
+					<div>
+						<div class="pt10 pb10" id="dialog-confirm">确认</div>
+						<div class="pt10 pb10" id="dialog-cancel">取消</div>
+					</div>
+				</div>
+				<div class="pl16">请输入玩家数量<input id="slidervalue1" size="2" >玩家数量为4-18</div>
+
+				<div class="slider-item">
+					<button class="subtract-number"></button>
+					<div class="slidershell" id="slidershell1">
+						<div class="sliderfill" id="sliderfill1"></div>
+						<div class="slidertrack" id="slidertrack1"></div>
+						<div class="sliderthumb" id="sliderthumb1"></div>
+						<input type="range" class="slider" id="slider1"  min="4" max="18" autocomplete="off"  oninput="showValue()" onchange="setValue()">
+						
+					</div>
+					<button class="add-number"></button>
+
+				</div>
+
+			</div>
+		</main>
+
+		<footer>
+			<button id="footer-button">去发牌</button>
+		</footer>
+		
+		<div class="black-layer"></div>
+
+		<script>
+			
+
+				
+				
+				localStorage.clear();
+				
+				
+				
+				//自定义滑块
+				function showValue() {
+								var ttt = ($("#slider1").val() - 4) / 14 * 174;
+								var lll = ($("#slider1").val() - 4) / 14 * 204;
+								var k01 = $("#slider1").val(); //获取滑块的值
+								var a = Math.round(Number(k01) / 3.5);
+								var b = Number(k01) - a;
+								$("#ghost").html(a);
+								$("#waterman").html(b);
+								$("#sliderfill1").css("width", ttt + 'px');
+								$("#sliderthumb1").css("left", ttt + "px");
+								$("#slidervalue1").val(k01);
+							}
+		        function setValue() {
+						
+						showValue();
+					}		
+							
+				
+							
+				 
+				$(".add-number").click(function() {
+								var t = $("#slider1").val();
+								t = Number(t) + 1;
+								$("#slider1").val(t);
+				
+								$("#slidervalue1").val(t);
+								showValue();
+				
+					});
+				
+				$(".subtract-number").click(function() {
+								var t = $("#slider1").val();
+								t = Number(t) - 1;
+								$("#slider1").val(t);
+				
+								$("#slidervalue1").val(t);
+								showValue();
+				
+					});
+				
+				
+				//input数字范围4-18,否则弹出对话框.
+				$("#slidervalue1").change(function() {
+								let t = $("#slidervalue1").val();
+								let rel = /^(([1-9])|(1[0-8]))$/;
+								 
+								if (rel.test(t) && t > 3) {
+				
+									$("#slider1").val(t);
+									showValue();
+								} else{
+									$(".dialog").show();
+									$(".black-layer").show();
+								}
+					});
+				
+					$("#dialog-confirm").click(function() {
+								$(".dialog").hide();
+								$(".black-layer").hide();
+				
+					});
+					$("#dialog-cancel").click(function() {
+								$(".dialog").hide();
+								$(".black-layer").hide();
+				
+					});
+				
+				
+				
+				
+				
+					$("#footer-button").mousedown(function() {
+								 let k =$("#waterman-word").val();
+								 let m =$("#ghost-word").val();
+								 let z = $("#slidervalue1").val();
+								 let r10 = /^(([\u4E00-\u9FA5]{1,10})|([A-Za-z0-9 ]{1,10}))$/;
+								 let rel = /^(([1-9])|(1[0-8]))$/;
+								
+								
+								 
+								 //弹出对话框
+								 if (k=="" || m=="" || r10.test(k)==false || r10.test(m)==false){
+									$(".dialog .dialog-text").html("请输入10字以内正确的词组");
+									$(".dialog").show();
+									$(".black-layer").show();
+									}else if(z=="" || z<4 || rel.test(z)==false){
+									$(".dialog .dialog-text").html("请输入正确的玩家数量");
+									$(".dialog").show();
+									$(".black-layer").show();
+									}else{
+										window.location.href="./pass.html"
+									}
+								
+								
+								
+				     //创建一个函数,该函数可以对数组进行打乱
+						Array.prototype.shuffle = function() {
+									var input = this;
+				
+									for (var i = input.length - 1; i >= 0; i--) {
+				
+										var randomIndex = Math.floor(Math.random() * (i + 1));
+										var itemAtIndex = input[randomIndex];
+				
+										input[randomIndex] = input[i];
+										input[i] = itemAtIndex;
+									}
+									return input;
+								}
+								
+							    //创建包含水民和幽灵的数组,并用shuffle()打乱顺序
+						function createArray(){
+									var arr = new Array();
+									var sliderNumber = Number($("#slidervalue1").val()); //获取滑块的值
+									arr[0] = "水民";
+									for(var i=1;i<sliderNumber;i++){
+										arr.push("水民");
+									}
+									
+									var a = Math.round(sliderNumber/3.5); 
+									
+									for(var i=0; i<a; i++){
+										arr[i]="幽灵"
+									}
+									
+									arr.shuffle();
+									return arr;
+								}
+								
+								//保存数组
+							var sliderNumber = Number($("#slidervalue1").val()); //获取滑块的值	
+							var	arra=createArray();
+							var word1 =$("#waterman-word").val();
+							var word2 =$("#ghost-word").val();
+							sessionStorage.setItem('total',sliderNumber);
+							sessionStorage.setItem('key',JSON.stringify(arra));
+							sessionStorage.setItem('waterman',JSON.stringify(word1));
+							sessionStorage.setItem('ghost',JSON.stringify(word2));
+							
+				    });
+				
+				
+				
+				
+				
+	
+			
+			
+			
+			
+		</script>
+			
+				
+				
+		
+
+	</body>
+
+</html>

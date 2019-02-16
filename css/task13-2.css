@@ -81,16 +81,19 @@ main .f12 {
   padding-left: 36px;
   color: #fff;
 }
-main .box {
-  padding-left: 20px;
-  padding-right: 25px;
+main .container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 120px;
+  padding-left: 6.5625vw;
+  padding-right: 7.5vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .item {
-  margin: 5.625vw 0;
+  margin: 5.625vw 0.9375vw;
   border: 0.78125vw solid #fff;
   width: 21.25vw;
   background: #F5C97B;

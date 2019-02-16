@@ -1,0 +1,366 @@
+body {
+  font-family: HiraginoSansGB-W3;
+  background-color: #f0f0f0;
+}
+header {
+  position: relative;
+  text-align: center;
+  height: 44px;
+  box-sizing: border-box;
+  background: #29BDE0;
+  color: #fff;
+  font-size: 17px;
+  padding-top: 17px;
+  line-height: 1;
+  border-bottom: 1px solid #fff;
+}
+header .icon-u04 {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  background: url(../img/icon.png);
+  width: 25px;
+  height: 21px;
+  background-position: -210px 0px;
+}
+header .icon-u13 {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  background: url(../img/icon.png);
+  width: 20px;
+  height: 20px;
+  background-position: -276px -30px;
+}
+main {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+.section1 {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 10px;
+}
+.section1 .f {
+  float: left;
+}
+.section1 .mt5 {
+  margin-top: 5px;
+}
+.section1 .pb50 {
+  padding-bottom: 50px;
+}
+.section1 .f18 {
+  background-color: #fff;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 4px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.section1 .f13 {
+  text-align: center;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background: #fff;
+  line-height: 18px;
+  color: #a1a1a1;
+}
+.section1 #ghost,
+.section1 #waterman {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}
+#section2 {
+  width: 100%;
+  margin: 5px 0;
+  background: #fff;
+  padding-bottom: 15px;
+}
+#section2 .bb1 {
+  margin-right: 16px;
+  margin-left: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  width: calc(100%-32px);
+}
+#section2 #waterman-word,
+#section2 #ghost-word {
+  -webkit-appearance: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #d7d7d7;
+  border: 0;
+  background: #fff;
+}
+#section2 #waterman-word,
+#section2 #ghost-word:focus {
+  outline: none;
+}
+.section3 {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 22px;
+  margin-bottom: 10px;
+  /* slidershell exists only
+to provide a positioning context for the range input and other elements.*/
+  /* .slidertrack is the visible track on which the user drags the thumb button. */
+  /* .sliderfill adds color (or a gradient as seen here) to the track as the user 
+    drags the thumb. */
+  /* .sliderthumb can be any css you like including an image. 
+    The dimensions must match those found in the rule for 
+    input[type=range]::-webkit-slider-thumb. */
+  /* .slidervalue can be styled as you see fit */
+  /* First we have to make transparent all the default elements of the range input.
+    We use color:transparent to eliminate the default tick marks in IE. */
+  /* we need a separate rule for when the range input is to be vertical */
+  /* Make the thumbs the same size as your custom sliderthumb. 
+    they will not be visible but they will be draggable.    */
+  /* microsoft IE10+ and Edge - eliminates default fills before and after thumb */
+}
+.section3 .pl16 {
+  padding-left: 16px;
+}
+.section3 .slider {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+  z-index: 100;
+}
+.section3 .slider-item {
+  margin-top: 25px;
+}
+.section3 #slidervalue1 {
+  border: 0;
+  background: #EDEEEE;
+  text-align: center;
+  color: #FAB344;
+}
+.section3 .slidershell {
+  display: inline-block;
+  margin-bottom: -5px;
+  width: 204px;
+  height: 18px;
+  position: relative;
+  overflow: visible;
+}
+.section3 .slidertrack {
+  width: 204px;
+  height: 2px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  z-index: 101;
+  background: #ffe6be;
+}
+.section3 .sliderfill {
+  height: 2px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  background: #fcc671;
+  z-index: 200;
+}
+.section3 .sliderthumb {
+  width: 30px;
+  height: 18px;
+  background-image: url(../img/handle.png);
+  background-size: 30px 18px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: 0 none;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  pointer-events: none;
+  z-index: 300;
+}
+.section3 .slidervalue {
+  width: 30px;
+  height: 21px;
+  line-height: 30px;
+  color: #000;
+  background: #f4f5f5;
+  font-family: helvetica, sans-serif;
+  font-size: 18px;
+  margin-left: 14px;
+  margin-right: 10px;
+  text-align: center;
+  pointer-events: none;
+}
+.section3 input[type='range']::-ms-track {
+  width: 204px;
+  height: 100%;
+  -webkit-appearance: none;
+  margin: 0px;
+  padding: 0px;
+  border: 0 none;
+  background: transparent;
+  color: transparent;
+  overflow: visible;
+}
+.section3 input[type='range']::-moz-range-track {
+  width: 204px;
+  height: 100%;
+  -moz-appearance: none;
+  margin: 0px;
+  padding: 0px;
+  border: 0 none;
+  background: transparent;
+  color: transparent;
+  overflow: visible;
+}
+.section3 input[type='range'] {
+  width: 204px;
+  height: 100%;
+  -webkit-appearance: none;
+  margin: 0px;
+  padding: 0px;
+  border: 0 none;
+  color: transparent;
+  overflow: visible;
+}
+.section3 input[type='range'].slidervertical {
+  -webkit-appearance: slider-vertical;
+  writing-mode: bt-lr;
+  /* IE */
+  opacity: 0.01;
+  /* needed to hide the default slider-vertical appearance */
+}
+.section3 input[type='range']:focus::-webkit-slider-runnable-track {
+  background: transparent;
+  border: transparent;
+}
+.section3 input[type='range']:focus {
+  outline: none;
+}
+.section3 input[type='range']::-ms-thumb {
+  width: 30px;
+  height: 18px;
+  border-radius: 0px;
+  border: 0 none;
+  background: transparent;
+}
+.section3 input[type='range']::-moz-range-thumb {
+  width: 30px;
+  height: 18px;
+  border-radius: 0px;
+  border: 0 none;
+  background: transparent;
+}
+.section3 input[type='range']::-webkit-slider-thumb {
+  width: 30px;
+  height: 18px;
+  border-radius: 0px;
+  border: 0 none;
+  background: transparent;
+  -webkit-appearance: none;
+}
+.section3 input[type='range']::-ms-fill-lower {
+  background: transparent;
+  border: 0 none;
+}
+.section3 input[type='range']::-ms-fill-upper {
+  background: transparent;
+  border: 0 none;
+}
+.section3 input[type='range']::-ms-tooltip {
+  display: none;
+}
+.section3 .add-number {
+  display: inline;
+  margin-left: 12px;
+  background: url(../img/addicon.png) no-repeat;
+  background-size: 9px 9px;
+  background-position: center center;
+  border: 1px solid #d9d9d9;
+  width: 14px;
+  height: 14px;
+}
+.section3 .subtract-number {
+  display: inline;
+  margin-left: 24px;
+  margin-right: 10px;
+  background: url(../img/subtract.png) no-repeat;
+  background-size: 9px 2px;
+  background-position: center center;
+  border: 1px solid #d9d9d9;
+  width: 14px;
+  height: 14px;
+}
+footer {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+footer button {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background: #fab344;
+  color: #fff;
+  border: 0;
+}
+.section3 {
+  position: relative;
+}
+.dialog {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 12px;
+  color: #a1a1a1;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+  /* 要设定宽度 */
+  z-index: 305;
+}
+.dialog .dialog-text {
+  border-bottom: 1px solid #999;
+  font-size: 14px;
+}
+.dialog #dialog-confirm {
+  float: right;
+  width: 50%;
+  border-left: 1px solid #999;
+  text-align: center;
+}
+.dialog #dialog-cancel {
+  text-align: center;
+}
+.dialog .pt10 {
+  padding-top: 10px;
+}
+.dialog .pb10 {
+  padding-bottom: 10px;
+}
+.dialog .pt20 {
+  padding-top: 20px;
+}
+.dialog .pb20 {
+  padding-bottom: 20px;
+}
+.dialog .pl20 {
+  padding-left: 20px;
+}
+.black-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(192, 192, 192, 0.8);
+  z-index: 300;
+  display: none;
+}

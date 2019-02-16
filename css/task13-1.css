@@ -62,6 +62,10 @@ main .box .f16 {
   line-height: 68px;
   background-color: #69D1E9;
 }
+main .box .f16 a {
+  text-decoration: none;
+  color: #ffffff;
+}
 main .box .f12 {
   font-family: HiraginoSansGB-W3;
   font-weight: normal;
